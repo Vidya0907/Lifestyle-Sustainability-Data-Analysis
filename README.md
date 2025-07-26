@@ -127,5 +127,24 @@ DIVIDE(
     SUM(lifestyle_sustainability_data[MonthlyWaterConsumption]),
     SUM(lifestyle_sustainability_data[HomeSize])
 )
+<br/>
+
+## 🖼️ Dashboard Snapshots
+
+<br/>
+
+<div align="center">
+  <img width="879" height="487" alt="image" src="https://github.com/user-attachments/assets/fd15b418-9703-487c-8014-a670fc7a6928" />
+</div>
+<br/>
+
+<div align="center">
+  <img width="879" height="485" alt="image" src="https://github.com/user-attachments/assets/25bcc9e6-c7cf-4142-a20b-7591f130ef9d" />
+</div>
+<br/>
+
+<div align="center">
+  <img width="879" height="488" alt="image" src="https://github.com/user-attachments/assets/cc9f71c6-2c90-4f1c-a27f-734f4066dd83" />
+</div>
 
 
