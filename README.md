@@ -2,7 +2,7 @@
 
 This project presents an interactive data visualization dashboard analyzing lifestyle sustainability factors across various dimensions like environment, household, and personal choices. The analysis is based on survey data from 499 participants and aims to understand behaviors impacting sustainability.
 
-
+<br/>
 
 ## 📊 Dashboard Overview
 
@@ -19,7 +19,7 @@ The dashboard is divided into three main sections, each designed to explore spec
 **📖 Storyline:**  
 This section analyzes the basic demographics and environmental awareness of participants. The goal is to understand **who the participants are**, how aware they are of sustainability issues, and whether factors like gender, age, or physical activity influence this awareness. It helps to identify **key target groups** for sustainability outreach and **education programs**.
 
----
+
 
 ### 2. **Household**
 - Water usage per person by home type
@@ -31,7 +31,7 @@ This section analyzes the basic demographics and environmental awareness of part
 **📖 Storyline:**  
 Sustainability starts at home. This section explores **household behaviors** that influence environmental impact—such as water and energy consumption, location, and travel choices. It sheds light on how **home type and infrastructure affect sustainable living**, and helps identify areas where lifestyle adjustments can reduce carbon footprint.
 
----
+
 
 ### 3. **Lifestyle**
 - Local food impact score by food frequency
@@ -46,7 +46,7 @@ Lifestyle choices play a major role in sustainability. This section dives into *
 
 
 
----
+<br/>
 
 ## 📌 Key Insights
 
@@ -56,10 +56,6 @@ Lifestyle choices play a major role in sustainability. This section dives into *
 - Only **47% of participants use sustainable brands**.
 - **Recycling** is the most common disposal method, followed by landfill usage.
 
----
 
-## 🚀 How to Use
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/lifestyle-sustainability-dashboard.git
+
