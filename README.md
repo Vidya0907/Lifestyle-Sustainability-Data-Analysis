@@ -56,6 +56,76 @@ Lifestyle choices play a major role in sustainability. This section dives into *
 - Only **47% of participants use sustainable brands**.
 - **Recycling** is the most common disposal method, followed by landfill usage.
 
+<br/>
 
+## 🧮 DAX Measures Used
+
+
+1. ElectricityEfficiencyIndex = 
+DIVIDE(
+    SUM(lifestyle_sustainability_data[EnvironmentalAwareness]),
+    SUM(lifestyle_sustainability_data[MonthlyElectricityConsumption])
+)
+
+2. EnvironmentalAwarenessScore = 
+AVERAGEX(
+    FILTER(
+        lifestyle_sustainability_data,
+        NOT(ISBLANK(lifestyle_sustainability_data[EnvironmentalAwareness]))
+    ),
+    lifestyle_sustainability_data[EnvironmentalAwareness]
+)
+
+3. LocalFoodImpactScore = 
+AVERAGEX(
+    lifestyle_sustainability_data,
+    SWITCH(
+        lifestyle_sustainability_data[LocalFoodFrequency],
+        "Always", 5,
+        "Often", 4,
+        "Sometimes", 3,
+        "Rarely", 2,
+        "Never", 1,
+        0
+    ) * 
+    DIVIDE(lifestyle_sustainability_data[EnvironmentalAwareness], 5)
+)
+
+4. SustainabilityScore = 
+VAR AwarenessScore = DIVIDE(AVERAGE(lifestyle_sustainability_data[EnvironmentalAwareness]), 5) * 25
+VAR WaterScore = 
+    VAR AvgWater = AVERAGE(lifestyle_sustainability_data[MonthlyWaterConsumption])
+    RETURN IF(AvgWater < 1000, 25, IF(AvgWater < 2000, 15, 5))
+VAR ElectricityScore = 
+    VAR AvgElec = AVERAGE(lifestyle_sustainability_data[MonthlyElectricityConsumption])
+    RETURN IF(AvgElec < 300, 25, IF(AvgElec < 500, 15, 5))
+VAR PlasticPenalty = 
+    IF(MAX(lifestyle_sustainability_data[UsingPlasticProducts]) = "Yes", -10, 0)
+VAR FinalScore = AwarenessScore + WaterScore + ElectricityScore + PlasticPenalty
+RETURN ROUND(FinalScore, 1)
+
+5. SustainabilityScore1 = 
+AVERAGEX(
+    lifestyle_sustainability_data,
+    DIVIDE(
+        lifestyle_sustainability_data[EnvironmentalAwareness] +
+        lifestyle_sustainability_data[Rating] +
+        SWITCH(TRUE(),
+            lifestyle_sustainability_data[DisposalMethods] = "Compost", 5,
+            lifestyle_sustainability_data[DisposalMethods] = "Recycle", 4,
+            lifestyle_sustainability_data[DisposalMethods] = "Trash", 2,
+            1
+        ),
+        3
+    )
+)
+
+6. Total = COUNTROWS(lifestyle_sustainability_data)
+
+7. WaterPerPerson = 
+DIVIDE(
+    SUM(lifestyle_sustainability_data[MonthlyWaterConsumption]),
+    SUM(lifestyle_sustainability_data[HomeSize])
+)
 
 
