@@ -134,7 +134,8 @@ DIVIDE(
 <br/>
 
 <div align="center">
-  <img width="879" height="487" alt="image" src="https://github.com/user-attachments/assets/fd15b418-9703-487c-8014-a670fc7a6928" />
+<img width="875" height="487" alt="image" src="https://github.com/user-attachments/assets/f178409b-7994-469c-ae0b-8746944a3651" />
+
 </div>
 <br/>
 
@@ -144,7 +145,8 @@ DIVIDE(
 <br/>
 
 <div align="center">
-  <img width="879" height="488" alt="image" src="https://github.com/user-attachments/assets/cc9f71c6-2c90-4f1c-a27f-734f4066dd83" />
+ <img width="878" height="487" alt="image" src="https://github.com/user-attachments/assets/2250c243-cf92-46c3-a1d4-fea5e7bf8d24" />
+
 </div>
 
 
